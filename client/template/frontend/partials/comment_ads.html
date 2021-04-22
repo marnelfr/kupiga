@@ -1,0 +1,44 @@
+<template name="commentAds">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 10px; padding-bottom: 7px;">
+                    <button type="button" class="close" style="position: relative; color: #bbb; left: 13px;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 style="text-align: left;" class="modal-title">
+                        <img src="{{url}}" style="width: 100px;height: 60px; margin-right: 15px;" class="pull-left" alt="images">
+                        {{name}}
+                        <span id="text-com" class="small" style=" display:  inherit; font-size: large;">Laissez un commentaire</span>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div id="div-comment" class="form-group">
+                        <div style="opacity: 0" class="info-comment">Appuyez sur <span>tab</span> pour accéder au <span>questionnaire</span></div>
+                        <textarea id="comment" class="form-control" style="height: 5em;" placeholder="Commentaire..."></textarea>
+                    </div>
+                    {{#each q in quiz}}
+                        <div id="q{{@index}}" style="display: none" class="quiz">
+                            <div class="qq">{{q.quiz}}</div>
+                            {{#each ans in q.answers}}
+                                <div class="anss">{{touche @index}}: {{ans}}</div>
+                            {{/each}}
+                        </div>
+                    {{/each}}
+                    <!--S'il faut vairment remercier l'utilisateur, alors....
+                    <div id="{{last}}" style="display: none" class="quiz">
+                        <div class="qq">{{q.quiz}}</div>
+                        {{#each ans in q.answers}}
+                        <div class="anss">{{ans}}</div>
+                        {{/each}}
+                    </div>-->
+                </div>
+                <div id="quiz-btn" style="position: relative; bottom: 10px;" class="text-center"><a style="border-top: 1px solid black; border-bottom: 1px solid black; color: #757474; border-color: #757474;" href="#">Répondre aux questions</a></div>
+                <div class="modal-footer" style="padding: 5px">
+                    <div class="pull-right">
+                        <button style="position: relative; top: 5px;" data-dismiss="modal" class="btn btn-default">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

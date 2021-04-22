@@ -1,0 +1,17 @@
+<template name="eachBigGoods">
+    {{#if good.principal}} {{else}}
+    <div class="col-md-3 beprincipal">
+        <div class="focus-grid w3layouts-boder1">
+            <a class="btn-8" href="#">
+                <div id="{{id}}" style="background: url({{urls}}) 0px 0px no-repeat; background-size: cover" class="focus-border images{{rang}}">
+                    <div class="focus-layout">
+                        <div class="focus-image transparant"><i class="fa fa-car"></i></div>
+                        <h4 class="clrchg transparant">Mobiles</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="box-title">{{name}}</div>
+    </div>
+    {{/if}}
+</template>

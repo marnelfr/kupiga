@@ -1,0 +1,124 @@
+<template name="contact">
+    <section>
+        <!-- contact -->
+        <div class="contact main-grid-border">
+            <div class="container">
+                <h2 class="w3-head text-center">Contactez-nous</h2>
+                <section id="hire">
+                    <form id="filldetails" action="#" method="post">
+                        <div class="field name-box">
+                            <input type="text" name="name" placeholder="Qui êtes-vous ?"/>
+                            <label>Nom</label>
+                            <span class="ss-icon"><i class="fa fa-check"></i></span>
+                        </div>
+
+                        <div class="field email-box">
+                            <input type="text" name="email" placeholder="example@email.com"/>
+                            <label>E-mail</label>
+                            <span class="ss-icon"><i class="fa fa-check"></i></span>
+                        </div>
+
+                        <div class="field phonenum-box">
+                            <input type="text" name="tel" placeholder="Numero de téléphone"/>
+                            <label>Contact</label>
+                            <span class="ss-icon"><i class="fa fa-check"></i></span>
+                        </div>
+
+                        <div class="field msg-box">
+                            <textarea id="msg" rows="4" placeholder="Message..."></textarea>
+                            <label>Votre message</label>
+                            <span class="ss-icon"><i class="fa fa-check"></i></span>
+                        </div>
+
+
+                    </form>
+                    <div class="upload" style="margin: 0 auto">
+                        <!--<form id="upload" method="post" action="#" enctype="multipart/form-data">
+                            <div style="float: left" id="drop">
+                                <a>Choisir un fichier</a>
+                                <input type="file" name="upl" multiple />
+                            </div>
+
+                            <ul class="show">
+                                &lt;!&ndash; The file uploads will be shown here &ndash;&gt;
+                            </ul>
+                        </form>-->
+                        <div class="clear"></div>
+                        <form class="submit">
+                            <input class="button" type="submit" value="Envoyer" />
+                        </form>
+                    </div>
+                </section>
+                <script>
+                    $('textarea').blur(function () {
+                        $('#hire textarea').each(function () {
+                            $this = $(this);
+                            if (this.value != '') {
+                                $this.addClass('focused');
+                                $('textarea + label + span').css({ 'opacity': 1 });
+                            } else {
+                                $this.removeClass('focused');
+                                $('textarea + label + span').css({ 'opacity': 0 });
+                            }
+                        });
+                    });
+                    $('#hire .field:first-child input').blur(function () {
+                        $('#hire .field:first-child input').each(function () {
+                            $this = $(this);
+                            if (this.value != '') {
+                                $this.addClass('focused');
+                                $('.field:first-child input + label + span').css({ 'opacity': 1 });
+                            } else {
+                                $this.removeClass('focused');
+                                $('.field:first-child input + label + span').css({ 'opacity': 0 });
+                            }
+                        });
+                    });
+                    $('#hire .field:nth-child(2) input').blur(function () {
+                        $('#hire .field:nth-child(2) input').each(function () {
+                            $this = $(this);
+                            if (this.value != '') {
+                                $this.addClass('focused');
+                                $('.field:nth-child(2) input + label + span').css({ 'opacity': 1 });
+                            } else {
+                                $this.removeClass('focused');
+                                $('.field:nth-child(2) input + label + span').css({ 'opacity': 0 });
+                            }
+                        });
+                    });
+                    $('#hire .field:nth-child(3) input').blur(function () {
+                        $('#hire .field:nth-child(3) input').each(function () {
+                            $this = $(this);
+                            if (this.value != '') {
+                                $this.addClass('focused');
+                                $('.field:nth-child(3) input + label + span').css({ 'opacity': 1 });
+                            } else {
+                                $this.removeClass('focused');
+                                $('.field:nth-child(3) input + label + span').css({ 'opacity': 0 });
+                            }
+                        });
+                    });
+                    $('#hire .field:nth-child(4) input').blur(function () {
+                        $('#hire .field:nth-child(4) input').each(function () {
+                            $this = $(this);
+                            if (this.value != '') {
+                                $this.addClass('focused');
+                                $('.field:nth-child(4) input + label + span').css({ 'opacity': 1 });
+                            } else {
+                                $this.removeClass('focused');
+                                $('.field:nth-child(4) input + label + span').css({ 'opacity': 0 });
+                            }
+                        });
+                    });
+                    //@ sourceURL=pen.js
+                </script>
+                <script>
+                    if (document.location.search.match(/type=embed/gi)) {
+                        window.parent.postMessage("resize", "*");
+                    }
+                </script>
+            </div>
+        </div>
+        <!-- // contact -->
+    </section>
+</template>

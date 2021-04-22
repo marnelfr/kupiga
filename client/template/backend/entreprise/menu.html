@@ -1,0 +1,76 @@
+<template name="entrepriseMenu">
+    <!--Utilisateur-->
+    <div class="user-panel">
+        <div class="pull-left image">
+            <img src="../images/backend/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+            <p>{{username}}</p>
+            <!--<a href="#"><i class="fa fa-circle text-danger"></i> En ligne</a>-->
+            <a href="#"><i class="fa fa-circle text-success"></i> En ligne</a>
+        </div>
+    </div>
+
+
+    <!-- search form -->
+    <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="key" id="" class="form-control" placeholder="Rechercher...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </form>
+    <!-- /.search form -->
+
+
+    <!-- sidebar menu-->
+    <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MENU PRINCIPALE</li>
+
+        <!--Tableau de bord-->
+        <li class="active">
+            <a href="{{home}}">
+                <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
+            </a>
+        </li>
+
+        <!--Publications-->
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-feed"></i>
+                <span>Publication</span>
+                <span class="pull-right-container">
+                    <span class="label label-primary pull-right">2 <!-- TODO: affichera le nombre de publication validée depuis sa dernière connection --></span>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a id="new-publi" href="{{pathFor 'addPublication'}}">
+                        <i class="fa fa-plus-circle"></i> Ajouter
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-check-circle"></i> Gerer
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--Statistique-->
+        <li class="<!--active-->">
+            <a href="#">
+                <i class="fa fa-bar-chart"></i> <span>Statistique</span>
+            </a>
+        </li>
+
+        <!--Paramètre Général-->
+        <li class="<!--active-->">
+            <a href="#">
+                <i class="fa fa-gears"></i> <span>Paramètre Général</span>
+            </a>
+        </li>
+    </ul>
+</template>

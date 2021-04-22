@@ -1,0 +1,51 @@
+<template name="backLayout">
+    {{#AdminLTE skin="blue"}}
+
+    <div class="wrapper">
+
+        {{> backHeader}}
+
+        {{> backMenu}}
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            {{#transitioner}}
+                <!-- Main content -->
+                {{> yield}}
+                <!-- /.content -->
+            {{/transitioner}}
+        </div>
+        <!-- /.content-wrapper -->
+        {{> backFooter}}
+    </div>
+    <!-- ./wrapper -->
+
+    {{/AdminLTE}}
+</template>
+
+<template name="backLayoutAdmin">
+    {{#AdminLTE skin="blue"}}
+
+    <div class="wrapper">
+
+        {{> backHeader}}
+
+        {{> backMenu}}
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            {{#transitioner}}
+            {{> contentHeader}}
+
+            <!-- Main content -->
+            {{> adminDashboard}}
+            <!-- /.content -->
+            {{/transitioner}}
+        </div>
+        <!-- /.content-wrapper -->
+        {{> backFooter}}
+    </div>
+    <!-- ./wrapper -->
+
+    {{/AdminLTE}}
+</template>

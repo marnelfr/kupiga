@@ -1,0 +1,20 @@
+<template name="eachSmallGoods">
+    <div id="ad{{id}}" class="col-md-4 margin-top">
+        <div class="w3ls-portfolio-left">
+            <div id="{{id}}" class="portfolio-img event-img">
+                <!--style="opacity: 0"  pour que les imgaes se mettent à défiler-->
+                <img src="{{urls}}"   class="img-responsive" alt=""/>
+                <div class="over-image"></div>
+            </div>
+            <div class="portfolio-description">
+                <h4><a href="#">{{name}}</a></h4>
+                <p title="{{description}}">{{desc}}</p>
+                <div>
+                    <button id="know" class="nell"><i class="fa fa-thumbs-up"></i></button>
+                    <button id="noknow" class="nell"><i class="fa fa-thumbs-down"></i></button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</template>

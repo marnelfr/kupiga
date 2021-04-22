@@ -1,0 +1,91 @@
+<template name="addPublication">
+    {{> contentHeader big='Publication' small='Nouvelle publication'}}
+    <section class="content">
+        <div class="row pageaff">
+            <div class="col-md-12">
+                <div class="box box-widget">
+                    <div class="box-header with-border" data-widget="collapse">
+                        <span style="font-size: 20px;"><i class="fa fa-inbox"></i> Nouvelle publication</span>
+                    </div>
+                    <div class="box-body" id="lecorps">
+                        <div class="form-group">
+                            <label>Nom du produit</label>
+                            <input id="nom" type="text" class="form-control" placeholder="Libellé">
+                        </div>
+                        <div class="form-group">
+                            <label>Descripton</label>
+                            <textarea id="description" maxlength="300" style="height: 150px; font-size: large" class="form-control" rows="3" placeholder="Description du produit..."></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-4 text-center">
+                                <div class="form-group">
+                                    <div id="nouvellePhot" style="border-radius: 0px" class="btn btn-default btn-file">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+                                        1ère Image
+                                        <input type="file" id="img1" accept="image/jpeg,image/png" name="attachment" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="form-group">
+                                    <div id="nouvellePhoto" style="border-radius: 0px" class="btn btn-default btn-file">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+                                        2ème Image
+                                        <input type="file" id="img2" accept="image/jpeg image/png" name="attachment" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="form-group">
+                                    <div id="nouvellehoto" style="border-radius: 0px" class="btn btn-default btn-file">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+                                        3ème Image
+                                        <input type="file" id="img3" accept="image/jpeg image/png" name="attachment" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div align="center" class="form-group">
+                            <label class="btn btn-default">
+                                <input id="big-ad" class="check" type="checkbox">
+                                Grande publicité
+                                <i id="check" class="fa fa-times big-ad"></i>
+                            </label>
+                        </div>
+                        <div class="masquer" id="quiz">
+                            <div class="form-group">
+                                <label>Categorie</label>
+                                <select id="type" class="form-control">
+                                    <option  disabled="disabled" selected>--Selectionner un type--</option>
+                                    <option>Produit</option>
+                                    <option>Entreprise</option>
+                                    <option>Service</option>
+                                </select>
+                            </div>
+                            <div id="lesquiz" class="col-md-12">
+                                <span style="font-size: 17px;"><i class="fa fa-question-circle"></i> Questions secondaires</span>
+                                <div class="btn-group pull-right">
+                                    <button id="addquiz" title="Appuyez sur Tabulation" type="button" class="btn btn-info"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <hr style="margin-top: 10px; margin-bottom: 1px">
+                            </div>
+                            <div class="quiz">
+                                <label class="quiz-label">Question 1</label>
+                                <div class="input-group input-group">
+                                    <input placeholder="1ère question" id="q1" type="text" class="form-control question">
+                                    <span class="input-group-btn">
+                                        <button type="button" title="Appuyez sur Entrer" class="btn btn-info btn-flat repondre"><i class="fa fa-registered"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <a href="#" id="reset-post" class="btn btn-default pull-left">Annuler</a>
+                        <button type="button" id="save-post" disabled class="btn btn-default pull-right">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

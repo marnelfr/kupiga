@@ -1,0 +1,62 @@
+<template name="showGoods">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{goods.name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel-example-generic" style="max-height: 250px" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            {{#each images}}
+                                <div class="item {{active @index}}">
+                                    <img src="{{this.url uploading='../images/uploading.gif' storing='../images/storing.gif'}}" style="height: 250px; width: 100%" alt="Première photo">
+                                    <div class="carousel-caption">
+                                        {{position @index}} photo
+                                    </div>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="fa fa-angle-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="fa fa-angle-right"></span>
+                    </a>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <div class="attribute">Description</div>
+                        <div class="value"><p>{{goods.description}}</p></div>
+                        <hr class="sprate">
+                    </div>
+                    <div>
+                        <div class="attribute">Type</div>
+                        <div class="value"><p>{{type goods.big}}</p></div>
+                        <hr class="sprate">
+                    </div>
+                    <div>
+                        <div class="attribute">Publier par </div>
+                        <div class="value"><p>{{goods.author}}</p></div>
+                        <hr class="sprate">
+                    </div>
+                    <div>
+                        <div class="attribute">Publier le </div>
+                        <div class="value"><p>{{formatedDate goods.submitted}}</p></div>
+                        <input type="hidden" id="token" value="{{goods._id}}">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button style="width: 49%;" title="Publier" id="publier" type="button" class="btn btn-default"><i class="fa fa-check"></i></button>
+                    <button style="width: 49%;" title="Rejeter" id="rejeter" type="button" class="btn btn-default"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+<template name="recherche">
+    <div class="w3l-popular-ads">
+        <div class="w3l-popular-ads-info">
+            <!--
+            Ceci sera charger d'afficher les produits qui ont un nom semblable à ce que l'utilisateur entre au clavier
+            Bref, on continu dans quelque instant
+            -->
+            {{#each ad in goods}}
+                {{#if douze @index}}
+                    {{> eachSmallGoods goods=ad rang=@index}}
+                {{/if}}
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</template>

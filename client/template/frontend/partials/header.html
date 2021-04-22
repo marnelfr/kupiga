@@ -1,0 +1,60 @@
+<template name="header">
+    <header>
+        <div class="w3ls-header"><!--header-one-->
+            <div class="w3ls-header-right">
+                {{#if currentUser}}
+                    <ul>
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'profileUser'}}" aria-expanded="false"><i class="fa fa-cogs" aria-hidden="true"></i> {{user.name}}</a>
+                        </li>
+                        {{#if admin}}
+                            <li class="dropdown head-dpdn">
+                                <a id="gotolte" href="#"><i class="fa fa-dashboard" aria-hidden="true"></i> Tableau de bord</a>
+                            </li>
+                        {{/if}}
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'aide'}}"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</a>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'logout'}}" aria-expanded="false"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
+                        </li>
+                    </ul>
+                {{else}}
+                    <ul>
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'connexion'}}" aria-expanded="false"><i class="fa fa-sign-in" aria-hidden="true"></i> Connexion</a>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'enregistrement'}}" aria-expanded="false"><i class="fa fa-user-plus" aria-hidden="true"></i> S'enregistrer</a>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="{{pathFor 'aide'}}"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</a>
+                        </li>
+                    </ul>
+                {{/if}}
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="container">
+            <div class="agile-its-header">
+                <div class="logo">
+                    <h1><a href="{{pathFor 'accueil'}}"><span>K</span>upiga</a></h1>
+                </div>
+                <div class="agileits_search">
+                    <form action="#" method="post">
+                        <input id="search-key" type="text" placeholder="Entrez le nom d'un produit"/>
+                        <select style="border-right: 1px solid;" id="agileinfo_search" name="agileinfo_search" required="">
+                            <option value="">Toute catégorie</option>
+                            <option>Entreprise</option>
+                            <option>Service</option>
+                            <option>Produit</option>
+                        </select>
+                    </form>
+                    <!--<a class="post-w3layouts-ad" href="post-ad.html">Ajouter un produit</a>-->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </header>
+</template>

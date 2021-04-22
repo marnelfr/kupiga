@@ -1,0 +1,35 @@
+<template name="principalAds">
+    <div class="slider"
+         data-zs-overlay="dots">
+        <ul class="rslides" id="slider">
+            <li>
+                <div class="w3ls-slide-text">
+                    <div class="description">
+                        <span>{{goods.name}}</span>
+                        <p>{{goods.description}}</p>
+                    </div>
+                    <div align="center" id="lesquiz" class="w3layouts-explore-all">
+
+                        <p id="quiz">{{question goods.type}}</p>
+                        <a id="like" class="btn btn-app nel">
+                            <span class="badge bg-red">{{goods.adorer}}</span>
+                            <i class="fa fa-heart-o"></i> <span class="btnval">J'adore</span>
+                        </a>
+                        <a id="oui" class="btn btn-app nel">
+                            <span class="badge bg-green">{{goods.oui}}</span>
+                            <i class="fa fa-thumbs-up"></i> <span class="btnval">Oui</span>
+                        </a>
+                        <a id="non" class="btn btn-app nel">
+                            <span class="badge bg-purple">{{goods.non}}</span>
+                            <i class="fa fa-thumbs-down"></i> <span class="btnval">Non</span>
+                        </a>
+                        <a id="masquer" class="btn btn-app nel">
+                            <span class="badge bg-teal">{{goods.masquer}}</span>
+                            <i class="fa fa-arrow-right"></i> <span class="btnval">Masquer</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</template>

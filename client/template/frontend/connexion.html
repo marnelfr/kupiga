@@ -1,0 +1,14 @@
+<template name="connexion">
+    <!-- content-starts-here -->
+    <section>
+        <div id="agileits-sign-in-page" class="sign-in-wrapper">
+            <div class="agileinfo_signin connect-form">
+                {{#if atDisabled}}
+                    {{> loading}}
+                {{else}}
+                    {{> atForm state='signIn'}}
+                {{/if}}
+            </div>
+        </div>
+    </section>
+</template>

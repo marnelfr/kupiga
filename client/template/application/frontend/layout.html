@@ -1,0 +1,20 @@
+<template name="layout">
+    {{> style}}
+    <!-- Navigation -->
+    <div class="agiletopbar">
+        {{> navigation}}
+    </div>
+    <!-- //Navigation -->
+
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    {{#transitioner}}
+        {{> yield}}
+    {{/transitioner}}
+
+    <!--footer section start-->
+    {{> footer}}
+    <!--footer section end-->
+</template>

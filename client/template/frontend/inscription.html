@@ -1,0 +1,14 @@
+<template name="inscription">
+    <!-- content-starts-here -->
+    <section>
+        <div id="agileits-sign-in-page" class="sign-in-wrapper">
+            <div class="agileinfo_signin" style=" padding-top: 20px; padding-bottom: 10px;">
+                {{#if atDisabled}}
+                    {{> loading}}
+                {{else}}
+                    {{> atForm state='signUp'}}
+                {{/if}}
+            </div>
+        </div>
+    </section>
+</template>

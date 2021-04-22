@@ -1,0 +1,23 @@
+<template name="backMenu">
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            {{#if onLoading}}
+                <div class="user-panel">
+                </div>
+                <form action="#" method="get" class="sidebar-form">
+                </form>
+                <ul class="sidebar-menu" data-widget="tree">
+                    {{> spinner}}
+                </ul>
+            {{else}}
+                {{#if admin}}
+                   {{> adminMenu}}
+                {{else}}
+                    {{> entrepriseMenu}}
+                {{/if}}
+            {{/if}}
+        </section>
+    </aside>
+</template>

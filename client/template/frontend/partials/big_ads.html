@@ -1,0 +1,27 @@
+<template name="bigAds">
+    {{#if noBigAds}}
+        {{> principalAds goods=kupiga}}
+    {{/if}}
+
+    {{#each ad in bigAds}}
+        {{#if ad.principal}}
+            {{> principalAds goods=ad}}
+        {{/if}}
+    {{/each}}
+
+    <div class="main-content">
+        {{#if finded}}
+            <div class="w3-categories">
+                <h3>Plus de produit</h3>
+                <div class="container">
+                    {{#each goods in bigAds}}
+                        {{#if douze @index}}
+                            {{> eachBigGoods good=goods rang=@index}}
+                        {{/if}}
+                    {{/each}}
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</template>

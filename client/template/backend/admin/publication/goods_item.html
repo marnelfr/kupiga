@@ -1,0 +1,27 @@
+<template name="goodsItem">
+    <tr>
+        <td class="text-bold">
+            {{name}}
+        </td>
+        <td class="text-justify goodsDescribe">
+            {{extrait description}}
+        </td>
+        <td class="text-center goodsDescribe">
+            {{type big}}
+        </td>
+        <td class="text-center text-bold" style="max-width: 170px">
+            {{author}}
+        </td>
+        <td class="text-center">
+            {{formatDate submitted}}
+        </td>
+        <td class="text-right">
+            <div class="btn-group">
+                <button style="margin-right: 5px" title="Afficher" id="show-goods" type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                <button style="margin-right: 5px" title="Publier" type="button" id="publier-goods" class="btn btn-default"><i class="fa fa-check"></i></button>
+                <button style="margin-right: 5px" title="Rejeter" type="button" id="rejeter-goods" class="btn btn-default"><i class="fa fa-times"></i></button>
+            </div>
+        </td>
+    </tr>
+</template>
+

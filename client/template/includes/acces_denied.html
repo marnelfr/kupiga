@@ -1,0 +1,23 @@
+<template name="accessDenied">
+    {{> style}}
+    <!-- Navigation -->
+    <div class="agiletopbar">
+        {{> navigation}}
+    </div>
+    <!-- //Navigation -->
+
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    {{#transitioner}}
+        <section>
+            <div align="center" class="access-denied page jumbotron">
+                <h2>Accès refusé</h2>
+                <p>Vous ne pouvez pas accéder à cette page! <a href="{{pathFor 'accueil'}}">Retourner à l'accueil</a></p>
+            </div>
+        </section>
+    {{/transitioner}}
+    <!--footer section start-->
+    {{> footer}}
+    <!--footer section end-->
+</template>

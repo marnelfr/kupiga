@@ -1,0 +1,14 @@
+<template name="reinitialiser">
+    <!-- content-starts-here -->
+    <section>
+        <div id="agileits-sign-in-page" class="sign-in-wrapper">
+            <div class="agileinfo_signin">
+                {{#if atDisabled}}
+                    {{> loading}}
+                {{else}}
+                    {{> atForm state='forgotPwd'}}
+                {{/if}}
+            </div>
+        </div>
+    </section>
+</template>

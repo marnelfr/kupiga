@@ -1,0 +1,23 @@
+<template name="navigation">
+    <div class="wthreenavigation">
+        <div class="menu-wrap">
+            <nav class="menu">
+                <div class="icon-list">
+                    <a href="{{pathFor 'accueil'}}"><i class="fa fa-fw fa-mobile"></i><span>Accueil</span></a>
+                    {{#if noUser}}
+                        <a href="{{pathFor 'connexion'}}"><i class="fa fa-fw fa-sign-in"></i><span>Connexion</span></a>
+                        <a href="{{pathFor 'enregistrement'}}"><i class="fa fa-fw fa-user-plus"></i><span>S'enregistrer</span></a>
+                    {{/if}}
+                    <a href="{{pathFor 'aide'}}"><i class="fa fa-fw fa-question-circle"></i><span>Aide</span></a>
+                    <a href="{{pathFor 'contact'}}"><i class="fa fa-fw fa-envelope"></i><span>Contactez-nous</span></a>
+                    {{#if currentUser}}
+                        <a href="{{pathFor 'logout'}}" aria-expanded="false"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
+                    {{/if}}
+                </div>
+            </nav>
+            <!--<button class="close-button" id="close-button">Close Menu</button>-->
+        </div>
+        <button class="menu-button" id="open-button"></button>
+    </div>
+    <div class="clearfix"></div>
+</template>
